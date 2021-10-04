@@ -1,0 +1,40 @@
+# include <stdio.h>
+#include <conio.h>
+int main()
+{
+	int a=5;
+	int b=3;
+	int matriz[5][3], i, j, vector[5]={0,0,0}, vector2[5]={0,0,0};
+	for(i=0; i<a; i++)
+	for(j=0; j<b; j++)
+	{
+		printf("indica la calificacion la calificacion %d, del alumno %d \n", i, j);
+		scanf("%d", &matriz[i][j]);
+		vector[i]=vector[i]+matriz[i][j];
+		vector2[j]=vector2[j]+matriz[i][j];
+	}
+	printf("Los valores obtenidos son:\n\n");
+	for (i=0; i<a; i++)
+	{
+		printf("\n");
+	for (j=0; j<b; j++)
+	{
+	printf ("%d \t", matriz[i][j]);
+	}
+	}
+	printf("\n\n");
+	
+	for (i=0; i<a; i++)
+	printf("%d promedio de estudiante \n", vector[i]/3);
+	
+	
+	
+		for (j=0; j<a; j++)
+		
+	printf("promedio de materia %d, %d \n", j, vector2[j]/5);
+	
+	{
+		getch();
+		return 0;
+	}
+}
